@@ -1,6 +1,9 @@
 from django.shortcuts import render
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
 
-# Create your views here.
+# Ref: https://github.com/kingsleyesisi/Movie-Scraping
 
-def home(request):
+def home(request):        
     return render(request, 'index.html')
