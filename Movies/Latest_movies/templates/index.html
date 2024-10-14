@@ -58,19 +58,18 @@
   </section>
 
   <!-- Main Section with a list of movies -->
-   <h1>This is the section for hte movies 
-
-   </h1>
-    <section class="py-16 bg-white">
-    <div class="container mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-        <div class="flex flex-col items-center px-4 py-6 bg-gray-100 rounded-lg shadow-md">
-          <img class="w-40 h-40 object-cover rounded-full" src="" alt="">
-          <div class="mt-4 text-lg font-bold text-gray-900"></div>
-          <div class="mt-2 text-sm text-gray-600"></div>
-        </div>
-      </div>
+  <main class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for movie in latest_movies %}
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="{{ movie.2 }}" alt="{{ movie.0 }}" class="w-full h-64 object-fit">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold">{{ movie.0 }}</h2>
+                    <p class="text-gray-600 mt-2">Release Date: {{ movie.1 }}</p>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-  </section>
-</body>
+</main>
+    <body>
 </html>
