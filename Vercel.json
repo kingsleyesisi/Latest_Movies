@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "Movies/wsgi.py",
+      "src": "Movies/Movies/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }
@@ -14,7 +14,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "Movies/wsgi.py"
+      "dest": "Movies/Movies/wsgi.py"
     }
   ]
 }
