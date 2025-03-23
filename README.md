@@ -1,4 +1,4 @@
 # Latest movies hub from web scraping 
 
 
-no API 
+A basic web scraping 
